@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-ExtraBold.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Light.otf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Semibold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-BlackItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+:root {
+  --lato: "Lato";
+  --gilroy: "Gilroy";
+  --main-color: #ffffff;
+  --yellow: #fff617;
+  --green: #277b33;
+  --oscuro: #535353;
+  --light-blue: #009ddc;
+  --backfill-footer: #f5fafc;
+  --font-16: calc(1.14vw);
+  --font-22: calc(1.6vw);
+  --font-20: calc(1.3vw);
+  --font-40: calc(3vw);
+  --pad-140: calc(9.5vw);
+}
+
+.preguntas-container {
+  padding: 133px var(--pad-140) 100px var(--pad-140);
+  background: #e0ece4;
+}
+.preguntas-container h1 {
+  color: var(--green);
+  font-family: var(--gilroy);
+  font-weight: 200;
+  font-size: var(--font-40);
+  padding-bottom: 80px;
+}
+.list-item {
+  color: var(--oscuro);
+  border-top: 1px solid rgb(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+}
+.list-title {
+  font-size: var(--font-20);
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin: 5px 0;
+}
+.list-title.active {
+  font-weight: 800;
+  color: var(--green);
+  transition: 0.3s ease;
+}
+.list-content {
+  overflow: hidden;
+  max-height: 0px;
+  transition: 0.3s ease;
+  font-weight: 600;
+  width: 90%;
+  padding-left: 39px;
+  font-size: 17px;
+}
+.active + .list-content {
+  max-height: 1000px;
+  transition: 0.3s ease;
+}
+.list-title::before {
+  content: "\002b";
+  font-size: 30px;
+  padding: 0 10px;
+  padding-top: 15px;
+  color: var(--green);
+}
+.list-title.active::before {
+  content: "\02212";
+  font-size: 30px;
+  padding: 0 10px;
+  padding-top: 15px;
+  color: var(--green);
+}
